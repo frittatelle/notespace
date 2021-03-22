@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 247, 232, 0.651);
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+
+header .logo {
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: 700;
+}
+
+header .logo span {
+  color: #ec615b;
+}
+
+header .logo span span {
+  color: #5222d0;
+}
+
+header ul {
+  position: relative;
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  display: inline-block;
+  color: #333;
+  font-size: 1em;
+  font-weight: 400;
+  margin-left: 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header ul li button {
+  display: inline-block;
+  color: #333;
+  font-size: 1em;
+  font-weight: 400;
+  margin-left: 40px;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .textBox {
+  position: relative;
+  max-width: 1000px;
+}
+
+.content .textBox h2 {
+  color: #333;
+  font-size: 3.5em;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+
+.content .textBox h1 {
+  color: #333;
+  font-size: 5em;
+  line-height: 1.4em;
+  font-weight: 700;
+  padding-bottom: 30px;
+}
+
+.content .textBox h2 span {
+  color: #ec615b;
+  font-weight: 700;
+}
+
+.content .textBox h2 span span {
+  color: #5222d0;
+  font-weight: 700;
+}
+
+.content .textBox p {
+  color: #333;
+  font-size: 1.3em;
+}
+
+.content .textBox button {
+  font-size: 1.1em;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #ec615b;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+.content .textBox button:hover {
+  background: #ec605bbc;
+}
+
+.content .animationBox {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.content .animationBox #bm {
+  min-width: 800px;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bottom {
+  background: #ec605b48;
+  clip-path: circle(80% at left 10% bottom -82%);
+}
+
+.top {
+  background: #5322d03f;
+  clip-path: circle(50% at right 0% top 10%);
+}
+
+/* My notes ////////////////////////////////////////// */
+
+.app {
+  display: flex;
+}
+
+.sidebar {
+  background: rgba(255, 247, 232, 0.651);
+  width: 25%;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+  box-shadow: 3px 0px 3px rgba(212, 212, 212, 0.493);
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  background: #ec615b;
+  color: white;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.post-add-icon {
+  color: #5222d0;
+  float: right;
+}
+
+.sidebar-list {
+  overflow-y: scroll;
+  height: calc(100vh - 156px);
+}
+
+.note {
+  padding: 25px;
+  transition: ease-in-out 0.2s;
+  border-bottom: 1px solid rgba(212, 212, 212, 0.493);
+}
+
+.no-notes {
+  padding: 30px;
+}
+
+.active-note {
+  background: #5322d01e;
+}
+
+.note-title {
+  display: flex;
+  justify-content: space-between;
+  text-overflow: ellipsis;
+}
+
+.note-title h3 {
+  color: #5222d0;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.note:hover {
+  background: #5322d01e;
+  /* background: rgba(255, 247, 232, 0.651); */
+}
+
+.delete-note-icon {
+  color: #ec615b;
+  cursor: pointer;
+}
+
+.note-body {
+  margin-top: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+.note-meta {
+  margin-top: 5px;
+  font-size: 0.85em;
+  color: grey;
+}
+
+.main {
+  width: 75%;
+  height: 100vh;
+}
+
+.editor {
+  background: rgb(248, 248, 248);
+  padding: 30px;
+  height: 53vh;
+  border-bottom: 1px solid #ddd;
+}
+
+.editor input {
+  display: block;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 10px;
+  resize: none;
+  font-size: 1.1em;
+  padding: 10px;
+  transition: ease-in-out 0.2s;
+}
+
+.editor input:focus {
+  outline: none;
+  background: rgba(129, 173, 255, 0.109);
+}
+
+.editor #body {
+  border: 1px solid #ddd;
+  font-size: 1em;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  height: calc(50vh - 130px);
+  transition: ease-in-out 0.2s;
+  resize: none;
+}
+
+.editor #body:focus {
+  background: rgba(129, 173, 255, 0.109);
+}
+
+.preview {
+  height: 40vh;
+}
+
+.preview-header {
+  display: flex;
+  min-width: 0;
+  justify-content: space-between;
+  padding: 20px 40px 10px;
+  border-bottom: 1px solid rgba(212, 212, 212, 0.493);
+}
+
+.preview-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 20px;
+}
+
+.preview-last-modified {
+  padding-top: 10px;
+  color: rgb(110, 110, 110);
+}
+
+.markdown-preview {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding: 40px;
+}
+
+.empty {
+  background: #ec605b65;
+}
+
+/* /////// about */
+
+.about {
+  display: flex;
+}
+
+.about-content {
+  position: relative;
+  width: 80%;
+}
+
+.about-content h2 {
+  color: #333;
+  font-size: 4em;
+  line-height: 1.4em;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+.about-content .text-box p {
+  color: #333;
+  font-size: 1.4em;
+  line-height: 1.4em;
+}
+
+.about-content .text-box input {
+  margin-top: 30px;
+  margin-right: 20px;
+  color: #5222d0;
+  font-weight: 700;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  border: 2px #333 solid;
+  padding: 10px;
+}
+
+.about-content .text-box input:focus {
+  background: #5322d01e;
+}
+
+.about-content .text-box iframe {
+  margin-top: 30px;
+  width: 100%;
+  height: 720px;
+}
+
+.about-content .text-box button {
+  font-size: 1.1em;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #ec615b;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.about-content .text-box button:hover {
+  background: #ec605bbc;
+}
+
+.about-content .random-fact {
+  display: block;
+}
+
+.about-content .random-fact p {
+  margin-top: 80px;
+  color: #ec615b;
+  font-size: 1.4em;
+  line-height: 1.4em;
+  font-weight: 700;
+  width: 50%;
+}
+
+.about-content .random-fact p span {
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.about-content .random-fact button {
+  font-size: 1.1em;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #5222d0;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.about-content .random-fact button:hover {
+  background: #5322d0cc;
+}
+
+.about-top {
+  background: #5322d03f;
+  clip-path: circle(40% at right 0% top 90%);
+}
+
+.about-bottom {
+  background: #ec605b48;
+  clip-path: circle(40% at left 30% bottom 130%);
+}
+
+.dog-image {
+  width: 25%;
+  position: relative;
+}
+
+.dog-image img {
+  width: 100%;
+}
+
+/* /* //////Contacts */
+.contact-us input,
+textarea {
+  display: block;
+  font-size: 1.1em;
+  width: 40%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.contact-us label {
+  font-size: 0.9em;
+  color: rgb(131, 131, 131);
+}
+
+.contact-us textarea {
+  height: 30vh;
+  resize: none;
+}
+
+.about-content .contact-us button {
+  font-size: 1.1em;
+  border-radius: 20px;
+  margin-top: 20px;
+  padding: 8px 20px;
+  background: #5222d0;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.about-content .contact-us button:hover {
+  background: #5322d0cc;
+}
